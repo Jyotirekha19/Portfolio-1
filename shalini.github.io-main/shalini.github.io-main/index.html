@@ -5,12 +5,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shalini Personal-portfolio</title>
+  <title>Joyjeetkalita Personal-portfolio</title>
 
   <!--
     - favicon
   -->
-  <link rel="shortcut icon" href="./assets/images/logo.jpg" type="image/x-icon">
+  <link rel="shortcut icon" href="./assets/images/jlogo.jpg" type="image/x-icon">
 
   <!--
     - custom css link
@@ -23,6 +23,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/ionicons@5.5.2/dist/css/ionicons.min.css">
+
   <style>
         /*-----------------------------------*\
   #style.css
@@ -502,7 +504,7 @@ transition: color var(--transition-1);
 .navbar-link:hover,
 .navbar-link:focus { color: var(--light-gray-70); }
 
-.navbar-link.active { color: var(--orange-yellow-crayola); }
+.navbar-link.active { color: var(--light-gray); }
 
 
 
@@ -787,7 +789,7 @@ transition: var(--transition-1);
 /**
 * education and experience 
 */
-
+/* 
 .timeline { margin-bottom: 30px; }
 
 .timeline .title-wrapper {
@@ -833,7 +835,7 @@ content: "";
 position: absolute;
 top: 5px;
 left: -33px;
-height: 6px;
+height: 9px;
 width: 6px;
 background: var(--text-gradient-yellow);
 border-radius: 50%;
@@ -846,8 +848,122 @@ font-weight: var(--fw-300);
 line-height: 1.6;
 }
 
+ */
 
+ /* General Timeline Styling */
+.timeline { 
+  margin-bottom: 30px; 
+}
 
+.timeline .title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.timeline-list {
+  font-size: var(--fs-6);
+  margin-left: 45px;
+}
+
+/* Individual Timeline Item Styling */
+.timeline-item { 
+  position: relative; 
+}
+
+.timeline-item:not(:last-child) { 
+  margin-bottom: 20px; 
+}
+
+.timeline-item-title {
+  font-size: var(--fs-6);
+  line-height: 1.3;
+  margin-bottom: 7px;
+}
+
+.timeline-list span {
+  color: var(--vegas-gold);
+  font-weight: var(--fw-400);
+  line-height: 1.6;
+}
+
+/* Timeline Item Markers and Decorations */
+.timeline-item:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  top: -25px;
+  left: -30px;
+  width: 1px;
+  height: calc(100% + 50px);
+  background: var(--jet);
+}
+
+.timeline-item::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -33px;
+  height: 9px;
+  width: 6px;
+  background: var(--text-gradient-yellow);
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px var(--jet);
+}
+
+.timeline-text {
+  color: var(--light-gray);
+  font-weight: var(--fw-300);
+  line-height: 1.6;
+}
+.title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.icon-box {
+  font-size: 24px; /* Adjust size as needed */
+  color: var(--vegas-gold); /* Or another color of your choice */
+}
+
+.h3 {
+  font-size: var(--fs-5); /* Define the font size as per your design */
+  line-height: 1.2;
+  margin: 0; /* Remove default margin */
+}
+
+.h4 {
+  font-size: var(--fs-6);
+  line-height: 1.3;
+  margin-bottom: 7px;
+}
+
+.timeline-list {
+  font-size: var(--fs-6);
+  margin-left: 45px;
+}
+
+.timeline-item {
+  position: relative;
+}
+
+.timeline-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.timeline-text {
+  color: var(--light-gray);
+  font-weight: var(--fw-300);
+  line-height: 1.6;
+}
+
+/* If needed, you can add styles for the icon itself */
+.icon-box ion-icon,
+.icon-box i {
+  display: inline-block;
+}
 
 
 /**
@@ -890,11 +1006,10 @@ border-radius: inherit;
 
 
 
-
 /*-----------------------------------*\
 #PORTFOLIO
 \*-----------------------------------*/
-
+/*
 .filter-list { display: none; }
 
 .filter-select-box {
@@ -948,14 +1063,15 @@ text-transform: capitalize;
 width: 100%;
 padding: 8px 10px;
 border-radius: 8px;
-}
-
+} 
+ 
 .select-item button:hover { --eerie-black-2: hsl(240, 2%, 20%); }
 
 .project-list {
 display: grid;
 grid-template-columns: 1fr;
 gap: 30px;
+
 margin-bottom: 10px;
 }
 
@@ -997,7 +1113,7 @@ transition: var(--transition-1);
 .project-item > a:hover .project-img::before { background: hsla(0, 0%, 0%, 0.5); }
 
 .project-item-icon-box {
---scale: 0.8;
+--scale: 2.8;
 
 background: var(--jet);
 color: var(--orange-yellow-crayola);
@@ -1047,7 +1163,7 @@ font-weight: var(--fw-300);
 }
 
 
-
+ */
 
 
 /*-----------------------------------*\
@@ -1235,6 +1351,7 @@ transition: var(--transition-1);
 .form-btn:disabled {
 opacity: 0.7;
 cursor: not-allowed;
+
 }
 
 .form-btn:disabled:hover { background: var(--border-gradient-onyx); }
@@ -1636,7 +1753,7 @@ textarea.form-input { margin-bottom: 30px; }
 
 .filter-item button:hover { color: var(--light-gray-70); }
 
-.filter-item button.active { color: var(--orange-yellow-crayola); }
+.filter-item button.active { color: var(grey); }
 
 /* portfolio and blog grid */
 
@@ -1918,13 +2035,13 @@ main {
       <div class="sidebar-info">
 
         <figure class="avatar-box">
-          <img src="./assets/images/shalini.jpg" alt="Shalini R" width="80">
+          <img src="./assets/images/pho.jpeg" alt="Jyoti" width="80">
         </figure>
 
         <div class="info-content">
-          <h1 class="name" title="Shalini R">Shalini R</h1>
+          <h1 class="name" title="Jyoyjeet Kalita">Jyoyjeet Kalita</h1>
 
-          <p class="title">B.E Computer Science and Engineering</p>
+          <p class="title">B.Tech Mechanical Engineering, <br>  National Institute of Technology, <br>Silchar</p>
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
@@ -1950,7 +2067,7 @@ main {
             <div class="contact-info">
               <p class="contact-title">Email</p>
 
-              <a href="mailto:shalini.r0205@gmail.com" class="contact-link">shalini.r0205@gmail.com</a>
+              <a href="mailto:joyjeetkalita1@gmail.com" class="contact-link">joyjeetkalita1@gmail.com</a>
             </div>
 
           </li>
@@ -1964,7 +2081,7 @@ main {
             <div class="contact-info">
               <p class="contact-title">Phone</p>
 
-              <a href="tel:+91 9150223019" class="contact-link">+91 9150223019</a>
+              <a href="tel:+91 60003117071" class="contact-link">+91 60003117071</a>
             </div>
 
           </li>
@@ -1978,7 +2095,7 @@ main {
             <div class="contact-info">
               <p class="contact-title">Birthday</p>
 
-              <time datetime="02-05-2004">May 02, 2004</time>
+              <time datetime="02-05-2004">July 24, 2002</time>
             </div>
 
           </li>
@@ -1992,7 +2109,7 @@ main {
             <div class="contact-info">
               <p class="contact-title">Location</p>
 
-              <address>Coimbatore, Tamil Nadu, India</address>
+              <address>Goalpara, Assam, India</address>
             </div>
 
           </li>
@@ -2003,10 +2120,13 @@ main {
 
         <ul class="social-list">
 
+         
           <li class="social-item">
-            <a href="https://www.linkedin.com/in/shalini-ravikumar" style="color:#c9cfcc;"><ion-icon name="logo-linkedin"></ion-icon></a>
+            <a href="https://www.linkedin.com/in/joyjeet-kalita-a9610b255" style="display: inline-flex; align-items: center; color: #296787; text-decoration: none;">
+              <ion-icon name="logo-linkedin" style="font-size: 20px; margin-right: 5px;"></ion-icon>LinkedIn
             </a>
           </li>
+          
 
         </ul>
 
@@ -2043,24 +2163,29 @@ main {
             }</style>
           </li>
 
+          
+
+
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Resume</button>
           </li>
 
-          <li class="navbar-item">
+          <!-- <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Portfolio</button>
-          </li>
+          </li> -->
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Blog</button>
+            <button class="navbar-link" data-nav-link>Projects</button>
           </li>
+         
+        
 
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Contact</button>
           </li>
 
           <li class="navbar-item">
-            <button><a href="https://drive.google.com/file/d/1RCuhH0W56rs2LB7LDcpFgbnEMoM2Ha6o/view?usp=sharing"  style="color:#c9cfcc;">Download CV ⇓</a></button>
+            <button><a href="https://drive.google.com/file/d/1TTvOm6D5f9z8KOa58YzieNK0S2Mrw1Da/view?usp=sharing"  style="color:#c9cfcc;">Download CV ⇓</a></button>
           </li>
 
         </ul>
@@ -2082,15 +2207,20 @@ main {
         </header>
 
         <section class="about-text">
-          <p>
-            At Karpagam Institute of Technology, I am a third-year student pursuing a Bachelor of Engineering degree in Computer Science and Engineering. 
-            My academic path has been an exciting adventure, and I feel really fortunate to have been a part of it.
+          <p>I am a motivated Mechanical Engineering student with a strong interest in designing and implementing mechanical solutions.
+            Throughout my academic journey, I’ve gained a solid foundation in key engineering principles, fueling my passion for
+             practical applications in the field.
+            I am eager to apply my knowledge to real-world challenges and contribute to innovative solutions.</p>
+            <br>
+            <p>
+             Skilled in design, analysis, and problem-solving, I have hands-on experience with CAD software that allows me to create precise models and simulations. 
+             My attention to detail and analytical thinking help me approach problems efficiently, ensuring both creativity and functionality in my work.
             </p>
-            <p>My capacity for quick adaptation and my talent for looking at problems from several angles make me stand out. 
-              This ability has allowed me to approach challenges with a variety of strategies, which has been quite helpful as I navigated the complex world of education.
-            </p>
-            <p>My goals as a student are really high since I'm steadfastly committed to making my dreams come true. 
-              I have a strong love for knowledge and innovation and am always pushing the limits of what is possible in the realms of technology
+            <br>
+            <p>
+             I am actively seeking opportunities to engage in practical, hands-on projects and innovative events.
+              I am excited to collaborate with others and explore new technologies to deepen my understanding of 
+             mechanical engineering and its vast possibilities.
             </p>
         </section>
 
@@ -2101,42 +2231,42 @@ main {
 
         <section class="service">
 
-          <h3 class="h3 service-title">What i'm doing</h3>
-
+          <h3 class="h3 service-title">Technologies I leverage</h3>
+  <br>
           <ul class="service-list">
 
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="./assets/images/icon-design.png
-                " alt="design icon" width="40">
+                <img src="./assets/images/icon-design.png" alt="Web development icon" width="40">
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Problem solving</h4>
+                <h4 class="h4 service-item-title">SolidWorks</h4>
 
                 <p class="service-item-text">
-                  Using technology to assist humanity and solve its challenges.
+                  I do 3D modeling, simulation, and analysis to design and optimize mechanical parts and assemblies.
                 </p>
               </div>
 
             </li>
 
             <li class="service-item">
-
               <div class="service-icon-box">
-                <img src="./assets/images/icon-dev.png" alt="Web development icon" width="40">
+                <img src="./assets/images/icon-dev.png
+                " alt="design icon" width="40">
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Web development</h4>
+                <h4 class="h4 service-item-title">MS Office</h4>
 
                 <p class="service-item-text">
-                  High-quality development of sites at the professional level.
-                </p>
+                  That is a suite of productivity tools for creating documents, spreadsheets, presentations, and managing emails.               </p>
               </div>
 
             </li>
+
+            
 
             <li class="service-item">
 
@@ -2145,11 +2275,10 @@ main {
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Cloud Engineering</h4>
+                <h4 class="h4 service-item-title">Fusion 360</h4>
 
                 <p class="service-item-text">
-                  Developing and deploying cloud related Projects.
-                </p>
+                  I utilize to create innovative 3D designs, run simulations, and bring product ideas to life.                </p>
               </div>
 
             </li>
@@ -2161,11 +2290,10 @@ main {
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Photography</h4>
+                <h4 class="h4 service-item-title">Canva</h4>
 
                 <p class="service-item-text">
-                  I make high-quality photos of any category at a professional level.
-                </p>
+                  To create visually appealing graphics, presentations, and designs easily without advanced design skills.                </p>
               </div>
 
             </li>
@@ -2174,98 +2302,17 @@ main {
 
         </section>
 
-
-        <!--
+        
+         <!--
           - testimonials
         -->
 
-        <section class="testimonials">
-
-          <h3 class="h3 testimonials-title">Testimonials</h3>
-
-          <ul class="testimonials-list has-scrollbar">
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title><!--Testimonial paragraph--></h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    <!--Testimonial paragraph-->
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-2.png" alt="Jessica miller" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title><!--Testimonial paragraph--></h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    <!--Testimonial paragraph-->
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-3.png" alt="Emily evans" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title><!--Testimonial paragraph--></h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    <!--Testimonial paragraph-->
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-4.png" alt="Henry william" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title><!--Testimonial paragraph--></h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    <!--Testimonial paragraph-->
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-          </ul>
-
-        </section>
-
+<!--         -->
 
         <!--
           - testimonials modal
         -->
-
+        
         <div class="modal-container" data-modal-container>
 
           <div class="overlay" data-overlay></div>
@@ -2332,72 +2379,211 @@ main {
               <ion-icon name="book-outline"></ion-icon>
             </div>
 
-            <h3 class="h3">Education</h3>
-          </div>
+          
 
-          <ol class="timeline-list">
 
-            <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">P.S.G Sarvajana Higher Secondary School</h4>
+          <h3 class="h3">Education</h3>
+</div>
 
-              <span>2006 — 2020</span>
+<ol class="timeline-list">
 
-              <p class="timeline-text">
-                Completed my primary and secondary schoolings at P.S.G Sarvajana Higher Secondary School.
-              </p>
+  <li class="timeline-item">
+    <h4 class="h4 timeline-item-title">Goalpara English School, Goalpara</h4>
+    <span>2007 – 2019</span>
+    <p class="timeline-text">
+      I completed my primary schooling at Goalpara English School, Goalpara, with 90% marks.
+    </p>
+  </li>
 
-            </li>
+  <li class="timeline-item">
+    <h4 class="h4 timeline-item-title">Ramanujan Junior College, Nagaon</h4>
+    <span>2019 – 2021</span>
+    <p class="timeline-text">
+      I completed my secondary schooling at Ramanujan Junior College, Nagaon, with 92.8% marks.
+    </p>
+  </li>
 
-            <li class="timeline-item">
+  <li class="timeline-item">
+    <h4 class="h4 timeline-item-title">National Institute of Technology, Silchar</h4>
+    <span>2022 – 2026</span>
+    <p class="timeline-text">
+      I am currently pursuing my Bachelor of Technology in Mechanical Engineering with a CGPA of 8.11 (till the 4th semester).
+    </p>
+  </li>
 
-              <h4 class="h4 timeline-item-title">Karpagam Institute Technology</h4>
+</ol>
 
-              <span>2021 — 2025</span>
-
-              <p class="timeline-text">
-                Completed my higher studies at Karpagam Institute of Technology.
-              </p>
-
-            </li>
-          </ol>
-        </br>
+        <!-- </br>
           <div class="title-wrapper">
             <div class="icon-box">
               <ion-icon name="book-outline"></ion-icon>
             </div>
-            <h3 class="h3">Nonformal Education</h3>
+            <h3 class="h3">Certifications</h3>
           </div>
 
           <ol class="timeline-list">
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">Associate cloud Engineering</h4>
+              <h4 class="h4 timeline-item-title">Combined AI and Excel</h4>
 
-              <span>Google cloud</span>
+              <span>Udemy</span>
 
               <p class="timeline-text">
-                Completed Associate cloud Engineering program at google cloud skills boost.
-              </p>
+                Learned to combine MS Excel with its AI features              </p>
 
             </li>
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">AWS For Beginners</h4>
+              <h4 class="h4 timeline-item-title">Summer Intership </h4>
 
-              <span>Great Learning</span>
+              <span>ONGC</span>
 
               <p class="timeline-text">
-                Pursuing my AWS for Beginners course at Great Learning.
-             </p>
+                Learned about Capital Overhauling of Kirloskar Air Compressor MODEL:4HA4BI             </p>
 
             </li>
-          </ol>
-        </br>
 
-        </section>
+            <li class="timeline-item"></li>
+
+              <h4 class="h4 timeline-item-title">Solidworks </h4>
+
+              <span>Itronix Solutions</span>
+
+              <p class="timeline-text">
+                 Passed Assessment Test based on Solidworks
+              </p>
+
+            </li>
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Summer Intership </h4>
+
+              <span>ONGC</span>
+
+              <p class="timeline-text">
+                Learned about Capital Overhauling of Kirloskar Air Compressor MODEL:4HA4BI             </p>
+
+            </li>
+           
+
+
+          </ol>
+        </br>-->
+
+
+        <br/>
+<div class="title-wrapper">
+  <div class="icon-box">
+    <ion-icon name="ribbon-outline"></ion-icon>
+  </div>
+  <h3 class="h3">Certifications</h3>
+</div>
+
+<ol class="timeline-list">
+
+  <li class="timeline-item">
+    <h4 class="h4 timeline-item-title">Combined AI and Excel</h4>
+    <span>Udemy</span>
+    <p class="timeline-text">
+      Learned to combine MS Excel with its AI features.
+    </p>
+  </li>
+
+  <li class="timeline-item">
+    <h4 class="h4 timeline-item-title">Summer Internship</h4>
+    <span>ONGC</span>
+    <p class="timeline-text">
+      Learned about Capital Overhauling of Kirloskar Air Compressor MODEL: 4HA4BI.
+    </p>
+  </li>
+
+  <li class="timeline-item">
+    <h4 class="h4 timeline-item-title">SolidWorks</h4>
+    <span>Itronix Solutions</span>
+    <p class="timeline-text">
+      Passed Assessment Test based on SolidWorks.
+    </p>
+  </li>
+
+  <li class="timeline-item">
+    <h4 class="h4 timeline-item-title">ASME EFx NIT Silchar</h4>
+    <span>ASME EFx NIT Silchar</span>
+    <p class="timeline-text">
+       Volunteered and managed the Successful conduction of the Event    </p>
+  </li>
+
+</ol>
+<br/>
+
+
+<br/>
+<div class="title-wrapper">
+  <div class="icon-box">
+    <ion-icon name="trophy-outline"></ion-icon>
+  </div>
+  <h3 class="h3">Honors and Awards</h3>
+</div>
+
+
+
+
+<ol class="timeline-list">
+
+  <li class="timeline-item">
+    <h4 class="h4 timeline-item-title"> Runner’s Up at Futsal (Mechatrix 2024)</h4>
+    <span>MES NIT Silchar</span>
+    <p class="timeline-text">
+      April, 2024    </p>
+  </li>
+
+  <li class="timeline-item">
+    <h4 class="h4 timeline-item-title"> Runner’s Up at RED DOT(Logo Design Competition) (Mechatrix 2023)</h4>
+    <span>MES NIT Silchar</span>
+    <p class="timeline-text">
+      April, 2023    </p>
+  </li>
+
+</ol>
+<br/>
+
+
+<br/>
+<div class="title-wrapper">
+  <div class="icon-box">
+    <ion-icon name="language-outline"></ion-icon>
+  </div>
+  <h3 class="h3">Language known</h3>
+</div>
+
+
+
+
+<ol class="timeline-list">
+
+  <li class="timeline-item">
+    <h4 class="h4 timeline-item-title"> English</h4>
+    
+  </li>
+
+  <li class="timeline-item">
+    <h4 class="h4 timeline-item-title"> Assamese</h4>
+   
+  </li>
+  <li class="timeline-item"></li>
+    <h4 class="h4 timeline-item-title"> Hindi</h4>
+   
+  </li>
+
+</ol>
+<br/>
+
+  
+
+
+        </section> 
 
         
         <section class="skill">
@@ -2409,7 +2595,7 @@ main {
             <li class="skills-item">
 
               <div class="title-wrapper">
-                <h5 class="h5">Machine learning</h5>
+                <h5 class="h5">C</h5>
                 <data value="30">Beginner</data>
               </div>
 
@@ -2422,7 +2608,7 @@ main {
             <li class="skills-item">
 
               <div class="title-wrapper">
-                <h5 class="h5">Programming</h5>
+                <h5 class="h5">HTML</h5>
                 <data value="70">Intermediate</data>
               </div>
 
@@ -2435,12 +2621,12 @@ main {
             <li class="skills-item">
 
               <div class="title-wrapper">
-                <h5 class="h5">Web development</h5>
-                <data value="90">beginner</data>
+                <h5 class="h5">MATLAB</h5>
+                <data value="90">Intermediate</data>
               </div>
 
               <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 20%;"></div>
+                <div class="skill-progress-fill" style="width: 60%;"></div>
               </div>
             </li>
 
@@ -2456,79 +2642,72 @@ main {
               </div>
 
             </li>
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Design and analysis</h5>
+                <data value="50">Advance</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 83%;"></div>
+              </div>
+
+            </li>
 
           </ul>
         </br>
 
-            <h3 class="h3 skills-title">Programming Knowlwdge</h3> <!--Change BY santhosh-->
+            <h3 class="h3 skills-title">Interpersonal Skills</h3> <!--Change BY santhosh-->
     
             <ul class="skills-list content-card">
     
               <li class="skills-item">
-    
-                <div class="title-wrapper">
-                  <h5 class="h5">C</h5>
-                  <data value="80">Intermediate</data>
+                <div class="title-wrapper" style="display: flex; align-items: center; gap: 10px;">
+                 
+                  <ion-icon name="rocket-outline" style="color: rgb(41, 118, 163); font-weight: bold; font-size: 24px;"></ion-icon>
+                  <h5 class="h5" style="margin: 0;">Problem-solving</h5>
                 </div>
-    
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 50%;"></div>
-                </div>
-    
               </li>
+              
     
               <li class="skills-item">
-    
-                <div class="title-wrapper">
-                  <h5 class="h5">Java</h5>
-                  <data value="70">Intermediate</data>
+                <div class="title-wrapper" style="display: flex; align-items: center; gap: 10px;">
+                  
+                  <ion-icon name="log-in-outline" style="color: rgb(41, 118, 163); font-weight: bold; font-size: 24px;"></ion-icon>                
+                    <h5 class="h5" style="margin: 0;">Adaptability</h5>
                 </div>
-    
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 40%;"></div>
-                </div>
-    
-              </li>
+              </li> 
+              
     
               <li class="skills-item">
-    
-                <div class="title-wrapper">
-                  <h5 class="h5">Python</h5>
-                  <data value="90">Intermediate</data>
-                </div>
-    
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 60%;"></div>
+                <div class="title-wrapper" style="display: flex; align-items: center; gap: 10px;">
+                  
+                  <ion-icon name="people-outline" style="color: rgb(41, 118, 163); font-weight: bold; font-size: 24px;"></ion-icon>            
+                        <h5 class="h5" style="margin: 0;">Teamplayer</h5>
                 </div>
               </li>
+              
 
               <li class="skills-item">
-    
-                <div class="title-wrapper">
-                  <h5 class="h5">Java Script</h5>
-                  <data value="90">Beginner</data>
-                </div>
-    
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 25%;"></div>
+                <div class="title-wrapper" style="display: flex; align-items: center; gap: 10px;">
+                  
+                  <ion-icon name="time-outline" style="color: rgb(41, 118, 163); font-weight: bold; font-size: 24px;"></ion-icon>  
+                    <h5 class="h5" style="margin: 0;">Time Management</h5>
                 </div>
               </li>
-    
+              
               <li class="skills-item">
-    
-                <div class="title-wrapper">
-                  <h5 class="h5">Html & CSS</h5>
-                  <data value="50">Beginner</data>
+                <div class="title-wrapper" style="display: flex; align-items: center; gap: 10px;">
+                 
+                  <ion-icon name="construct-outline"  style="color: rgb(41, 118, 163); font-weight: bold; font-size: 24px;"></ion-icon>  
+                    <h5 class="h5" style="margin: 0;">Work Ethic</h5>
                 </div>
-    
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 30%;"></div>
-                </div>
-    
               </li>
+              
     
             </ul>
-          </br>
+          <!-- </br>
             <h3 class="h3 skills-title">My Git-Hub Repository</h3>
             <li class="social-item">
               <a href="https://github.com/Shalini21csa57" style="color:#c9cfcc;"><ion-icon name="logo-github"></ion-icon></a>
@@ -2539,7 +2718,7 @@ main {
            
             <li class="social-item">
               <a href="https://leetcode.com/21csa57/" style="color:#5d6899;">Leetcode</a></br>
-              </a>
+              </a> -->
             
 
         </section>
@@ -2578,9 +2757,14 @@ main {
               <button data-filter-btn>Badges</button>
             </li>
       
+      
             <li class="filter-item">
               <button data-filter-btn>Projects</button>
             </li> -->
+           
+            <li class="filter-item">
+              <button data-filter-btn>Projects</button>
+            </li> 
       
           </ul>
       
@@ -2598,7 +2782,7 @@ main {
       
             <ul class="select-list">
       
-              <!-- <li class="select-item">
+               <!-- // <li class="select-item">
                 <button data-select-item>All</button>
               </li>
       
@@ -2612,7 +2796,7 @@ main {
       
               <li class="select-item">
                 <button data-select-item>Projects</button>
-              </li> -->
+              </li> //  -->
       
             </ul>
       
@@ -2628,13 +2812,33 @@ main {
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
       
-                  <img src="./assets/images/sign.png" alt="finance" loading="lazy">
+                  <img src="./assets/images/proj1.png" alt="finance" loading="lazy">
                 </figure>
+            <div>  <h3 class="project-title">ASME e-Human Powered Vehicle Challenge (e-HPVC)</h3> 
+              <p> Participating as a member of the eHPVC 7-membered Team, which is a national level competition. Contributed
+                to the design and development of a competitive vehicle which have to undergo speed tests and various
+                obstruction. Took responsibility for designing 3 critical components namely the seat, front fork, and pedal hub,
+                enhancing both functionality and performance. </p> 
+            </div>
+              </a>
+            </li>   
+                
+            
       
+<!--       
+                <h3 class="project-title">Creating a auction website using MERN stack</h3>
+            
                 <h3 class="project-title">Creating a auction website using MERN stack</h3>
       
-                <p class="project-category">Projects</p>
       
+                <p class="project-category">Projects</p>
+            
+                <p class="project-category">Projects</p>
+       -->
+      
+              </a>
+            </li>
+            
               </a>
             </li>
       
@@ -2765,13 +2969,13 @@ main {
 
 
       <!--
-        - #BLOG
+        - #WORK
       -->
 
-      <article class="blog" data-page="blog">
+      <article class="projects" data-page="projects">
 
         <header>
-          <h2 class="h2 article-title">Blog</h2>
+          <h2 class="h2 article-title">Projects</h2>
         </header>
 
         <section class="blog-posts">
@@ -2785,10 +2989,10 @@ main {
                   <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
                 </figure>
 
-                <div class="blog-content">
+                <div class="blog-content">             
 
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
+                  <div class="blog-meta">                
+                    <p class="blog-category">Design</p>        
 
                     <span class="dot"></span>
 
@@ -2800,68 +3004,73 @@ main {
                   <p class="blog-text">
                     Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
                   </p>
-
+                                          
                 </div>
 
               </a>
             </li> -->
 
             <li class="blog-post-item">
-              <a href="#">
+              <a href="#">                     
 
                 <figure class="blog-banner-box">
-                  <img src="./assets/images/ml.jpg" alt="Best fonts every designer" loading="lazy">
+                  <img src="./assets/images/p1.jpg" alt="Best fonts every designer" loading="lazy">
                 </figure>
 
                 <div class="blog-content">
 
                   <div class="blog-meta">
-                    <p class="blog-category">Unlocking the Marvels of Machine Learning</p>
+                   <strong>  <h3 class="blog-category" style="color: #296787;">   e-Human Powered Vehicle Challenge (e-HPVC)
+                  </h3></strong>
                     
-                    <span class="dot"></span>
+                    <!-- <span class="dot"></span> -->               
 
                     <!-- <time datetime="2022-02-23">Feb 23, 2022</time> -->
                   </div>
 
-                  <h3 class="h3 blog-item-title">A Comprehensive Introduction</h3>
+                 <!-- <strong> <h3 class="h3 blog-item-title">A Comprehensive Introduction</h3></strong>  -->
 
-                  <p class="blog-text">
-                    .
+                  <p class="blog-text">                      
+                    Participating as a member of the eHPVC 7-membered Team, which is a national level competition. Contributed
+                    to the design and development of a competitive vehicle which have to undergo speed tests and various
+                    obstruction. Took responsibility for designing 3 critical components namely the seat, front fork, and pedal hub,
+                    enhancing both functionality and performance.
                   </p>
-
+                                      
                 </div>
 
               </a>
             </li>
 
-            <!--<li class="blog-post-item">
+            <li class="blog-post-item">                              
               <a href="#">
 
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy">
+                <figure class="blog-banner-box">              
+                  <img src="./assets/images/p2.jpg" alt="Design digest #80" loading="lazy">           
                 </figure>
-
-                <div class="blog-content">
+                        
+                <div class="blog-content">            
 
                   <div class="blog-meta">
-                    <p class="blog-category">Design</p>
+                    <h3 class="blog-category" style="color: #296787;"> Low Cost Burner for High Altitude Terrain</h3>
 
-                    <span class="dot"></span>
+                    <!-- <span class="dot"></span> -->          
 
-                    <time datetime="2022-02-23">Feb 23, 2022</time>
-                  </div>
+                    <!-- <time datetime="2022-02-23">Feb 23, 2022</time> -->                          
+                  </div>                                                              
 
-                  <h3 class="h3 blog-item-title">Design digest #80</h3>
+                  <!-- <h3 class="h3 blog-item-title">Design digest #80</h3> -->                  
 
                   <p class="blog-text">
-                    Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.
-                  </p>
+                    Developed conceptual designs for low-cost burners optimized for high-altitude regions, addressing challenges of
+                    low oxygen and pressure. Utilized manual air compressors and optimized alcohol burners, featuring a burner
+                    head design with 40 outer holes and 31 top holes, achieving 67.01 percent thermal efficiency.                  </p>
 
-                </div>
-
+                </div>                                                                                             
+                                                                                            
               </a>
             </li>
-
+<!--
             <li class="blog-post-item">
               <a href="#">
 
@@ -2872,9 +3081,9 @@ main {
                 <div class="blog-content">
 
                   <div class="blog-meta">
-                    <p class="blog-category">Design</p>
+                    <p class="blog-category">Design</p> 
 
-                    <span class="dot"></span>
+                    <span class="dot"></span>      
 
                     <time datetime="2022-02-23">Feb 23, 2022</time>
                   </div>
@@ -2883,9 +3092,9 @@ main {
 
                   <p class="blog-text">
                     Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.
-                  </p>
+                  </p>                   
 
-                </div>
+                </div>                   
 
               </a>
             </li>
@@ -2901,12 +3110,12 @@ main {
 
                   <div class="blog-meta">
                     <p class="blog-category">Design</p>
-
+                                                       
                     <span class="dot"></span>
-
+                                           
                     <time datetime="2022-02-23">Feb 23, 2022</time>
                   </div>
-
+                        
                   <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
 
                   <p class="blog-text">
@@ -2914,10 +3123,10 @@ main {
                   </p>
 
                 </div>
-
+                                
               </a>
             </li>
-
+                        
             <li class="blog-post-item">
               <a href="#">
 
@@ -2975,8 +3184,8 @@ main {
 
           <h3 class="h3 form-title">Contact Form</h3>
 
-          <form action="#" class="form" data-form>
-
+          <!-- <form action="#" class="form" data-form> -->
+          <form name="submit-to-google-sheet" >
             <div class="input-wrapper">
               <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
 
@@ -2984,11 +3193,11 @@ main {
             </div>
 
             <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
-
-            <button class="form-btn" type="submit" disabled data-form-btn>
+            <button class="form-btn" type="submit" data-form-btn>
               <ion-icon name="paper-plane"></ion-icon>
               <span>Send Message</span>
             </button>
+            
 
           </form>
 
@@ -3001,7 +3210,7 @@ main {
   </main>
 
    <script>
-       'use strict';
+       
 
 
 
@@ -3118,24 +3327,24 @@ for (let i = 0; i < filterBtn.length; i++) {
 
 
 
-// contact form variables
-const form = document.querySelector("[data-form]");
-const formInputs = document.querySelectorAll("[data-form-input]");
-const formBtn = document.querySelector("[data-form-btn]");
+// // contact form variables
+// const form = document.querySelector("[data-form]");
+// const formInputs = document.querySelectorAll("[data-form-input]");
+// const formBtn = document.querySelector("[data-form-btn]");
 
-// add event to all form input field
-for (let i = 0; i < formInputs.length; i++) {
-  formInputs[i].addEventListener("input", function () {
+// // add event to all form input field
+// for (let i = 0; i < formInputs.length; i++) {
+//   formInputs[i].addEventListener("input", function () {
 
-    // check form validation
-    if (form.checkValidity()) {
-      formBtn.removeAttribute("disabled");
-    } else {
-      formBtn.setAttribute("disabled", "");
-    }
+//     // check form validation
+//     if (form.checkValidity()) {
+//       formBtn.removeAttribute("disabled");
+//     } else {
+//       formBtn.setAttribute("disabled", "");
+//     }
 
-  });
-}
+//   });
+// }
 
 
 
@@ -3164,6 +3373,19 @@ for (let i = 0; i < navigationLinks.length; i++) {
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
+
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxahzpR4koBki14Vfvijc9C2qPZPUWuyGuGixjjLAlwL0UOqePw1tF52KeR1supFM1ihg/exec'; // Replace with the Apps Script URL
+    const form = document.forms['submit-to-google-sheet'];
+    
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => alert('Form submitted successfully!'))
+        .catch(error => console.error('Error!', error.message));
+    });
+  </script>
+  
 </body>
 
 </html>
